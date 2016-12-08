@@ -1,0 +1,33 @@
+<form class= "form-horizontal">
+ <h1>ReDDit App</h1>
+ <h3 class="ui header">Add a Link</h3>
+
+ <div class="field">
+ <label for="title" class="col-sm-2 control-label">Title :</label>
+ <input name="title" #newtitle > 
+ </div>
+ <div class="field">
+  <label for="link" class="col-sm-2 control-label">Link :</label>
+ <input name="link" #newlink> 
+ </div>
+ <br/>
+
+
+ <div class="form-group">
+ <button (click)="addArticle(newtitle, newlink)"
+ class= "btn btn-default">
+ Submit link
+ </button>
+ </div>
+ 
+
+ </form>
+
+ <div class="ui grid posts">
+ <app-article
+ *ngFor="let article of sortedArticles()"
+ [article]="article">
+ </app-article>
+ </div>
+
+ 

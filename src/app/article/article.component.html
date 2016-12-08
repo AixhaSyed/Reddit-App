@@ -1,0 +1,45 @@
+<fieldset>
+<div class="four wide column center aligned votes" style="background-color:lightgrey;">
+ <div class="ui statistic">
+ <div class="col-sm-4" >
+ Point
+ </div>
+ <div class="label">
+ {{ article.votes }}
+ </div>
+ </div>
+ </div>
+ <div class="item">
+ <a class="ui large header" href="{{ article.link }}">
+ {{ article.title }}
+ </a>
+ <div class="text-center">({{ article.domain() }})</div>
+
+ <ul class="ui big horizontal list voters">
+ <li class="col-sm-8">
+ <button (click)="voteUp()" class="btn btn-outline-primary">
+ <i class="arrow up icon"></i>
+ upvote
+ </button>
+ </li>
+ <li class="item">
+ <button (click)="voteDown()" class="btn btn-outline-primary">
+ <i class="arrow down icon" ></i>
+ downvote
+ </button>
+ </li>
+ </ul>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
